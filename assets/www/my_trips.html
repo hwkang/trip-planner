@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="css/main.css" />
+
+<script type="text/javascript" charset="utf-8" src="js/cordova-1.6.0.js"></script>
+<script type="text/javascript"  src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.1.0.min.js"></script>
+</head>
+
+<body>
+<div data-role="page">
+    <div data-role="header" data-position="fixed">
+		<h1>Trip Planner</h1>
+	</div>
+    
+    <br/><br/>
+    Recent Routes
+    <ul data-role="listview" data-inset="true" >
+		<li><a href="direction_detail.html" rel="external" >U Pitts to Waterfront</a></li>
+		<li><a href="direction_detail.html" rel="external" >Zoo to Highland Park</a></li>
+		<li><a href="direction_detail.html" rel="external" >Carnegie Mellon to 5th Ave</a></li>
+	</ul>
+	
+	<br/><br/>
+	Saved Routes
+    <ul data-role="listview" data-inset="true">
+		<li><a href="direction_detail.html" rel="external" >Carnegie Mellon to 5th Ave</a></li>
+		<li><a href="direction_detail.html" rel="external" >U Pitts to Waterfront</a></li>
+	</ul>
+    
+	
+	<div data-role="footer" data-position="fixed" class="nav-glyphish ui-footer-fixed">
+	    <!-- We want four columns, so set data-grid="c", for three columns:"b", two columns:"a" etc -->
+		<div data-role="navbar" class="nav-glyphish" data-grid="c">
+		<ul>
+			<li><a href="index.html" id="direction" data-icon="custom" data-ajax="false">Direction</a></li>
+			<li><a href="schedule.html" id="schedule" data-icon="custom" data-ajax="false">Schedule</a></li>
+			<li><a href="fare.html" id="fare" data-icon="custom" data-ajax="false">Fare</a></li>
+			<li><a href="my_trips.html" id="my_trips" data-icon="custom" data-theme="b" data-ajax="false">My Trips</a></li>
+		</ul>
+		</div>
+	</div>	
+
+</div>
+</body>
+</html>

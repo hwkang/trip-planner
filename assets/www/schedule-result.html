@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="css/main.css" />
+
+<script type="text/javascript" charset="utf-8" src="js/cordova-1.6.0.js"></script>
+<script type="text/javascript"  src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.1.0.min.js"></script>
+</head>
+
+<body>
+<div data-role="page">
+    <div data-role="header" data-position="fixed">
+		<h1>Trip Planner</h1>
+	</div>
+	
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" data-filter="true">
+			<li>6:30am</li>
+			<li>6:45am</li>
+			<li>7:00am</li>
+			<li>7:15am</li>
+			<li>7:30am</li>
+			<li>8:00am</li>
+			<li>8:30am</li>
+			<li>8:45am</li>
+			<li>9:00am</li>
+		</ul>
+	</div>
+    
+	
+	<div data-role="footer" data-position="fixed" class="nav-glyphish ui-footer-fixed">
+	    <!-- We want four columns, so set data-grid="c", for three columns:"b", two columns:"a" etc -->
+		<div data-role="navbar" class="nav-glyphish" data-grid="c">
+		<ul>
+			<li><a href="index.html" id="direction" data-icon="custom" data-ajax="false">Direction</a></li>
+			<li><a href="schedule.html" id="schedule" data-icon="custom" data-theme="b" data-ajax="false">Schedule</a></li>
+			<li><a href="fare.html" id="fare" data-icon="custom" data-ajax="false">Fare</a></li>
+			<li><a href="my_trips.html" id="my_trips" data-icon="custom" data-ajax="false">My Trips</a></li>
+		</ul>
+		</div>
+	</div>	
+
+</div>
+</body>
+</html>

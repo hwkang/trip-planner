@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="css/main.css" />
+
+<script type="text/javascript" charset="utf-8" src="js/cordova-1.6.0.js"></script>
+<script type="text/javascript"  src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var url = document.URL;
+		var msg = 'Three routes to ';
+		var params = url.substr(url.indexOf('?')+1).split('&');
+		var from = params[0].split('=')[1];
+		var to = params[1].split('=')[1];
+		var time = params[2].split('=')[1];
+		msg += to + ' from ' + from + ' in ' + time;
+		$('#route-info').html(msg);
+	});
+ 
+</script>
+</head>
+
+<body>
+<div data-role="page">
+    <div data-role="header" data-position="fixed">
+		<h1>Trip Planner</h1>
+	</div>
+	
+	<div data-role="content">
+	    <h3 id="route-info"></h3>
+	    
+	    <ul data-role="listview" data-inset="true" data-filter="true">
+			<li><a href="direction_detail.html" rel="external" >71C</a></li>
+			<li><a href="direction_detail.html" rel="external" >71D</a></li>
+			<li><a href="direction_detail.html" rel="external" >64</a></li>
+			<li><a href="direction_detail.html" rel="external">61C</a></li>
+		</ul>
+	    
+	</div>
+    
+	
+	<div data-role="footer" data-position="fixed" class="nav-glyphish ui-footer-fixed">
+	    <!-- We want four columns, so set data-grid="c", for three columns:"b", two columns:"a" etc -->
+		<div data-role="navbar" class="nav-glyphish" data-grid="c">
+		<ul>
+			<li><a href="index.html" id="direction" data-icon="custom" data-theme="b" data-ajax="false">Direction</a></li>
+			<li><a href="schedule.html" id="schedule" data-icon="custom" data-ajax="false">Schedule</a></li>
+			<li><a href="fare.html" id="fare" data-icon="custom" data-ajax="false">Fare</a></li>
+			<li><a href="my_trips.html" id="my_trips" data-icon="custom" data-ajax="false">My Trips</a></li>
+		</ul>
+		</div>
+	</div>	
+
+</div>
+</body>
+</html>

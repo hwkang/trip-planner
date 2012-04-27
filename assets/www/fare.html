@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="css/main.css" />
+
+<script type="text/javascript" charset="utf-8" src="js/cordova-1.6.0.js"></script>
+<script type="text/javascript"  src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript">
+    function set_from_current(){
+    	$('#from').val('My Location');
+    }
+    
+    function set_to_current(){
+    	$('#to').val('My Location');
+    }
+    
+    function switch_from_to(){
+    	var tmp = $('#from').val();
+    	$('#from').val($('#to').val());
+    	$('#to').val(tmp);
+    }
+    
+    function get_price(){
+    	if($('#full_fare').attr('checked') == 'checked'){
+    	    $('#price_area').html('Price: $5');
+    	}else{
+    		$('#price_area').html('Price: $2.5');
+    	}    	
+    	
+    }
+    
+</script>
+</head>
+
+<body>
+<div data-role="page">
+    <div data-role="header" data-position="fixed">
+		<h1>Trip Planner</h1>
+	</div>
+    
+    
+    <div data-role="content">
+		<table>
+		    <tr>
+			    <td>From:</td>
+			    <td><input type="text" name="from" id="from" value=""  /></td>
+			    <td>&nbsp;&nbsp;<a href="javascript:;" onclick="set_from_current()"><img src="images/193-location-arrow.png"/></a></td>
+		    </tr>
+		    <tr>
+		        <td></td><td></td>
+		        <td>&nbsp;&nbsp;<a href="javascript:;" onclick="switch_from_to()"><img src="images/288-retweet.png"/></a></td></tr>
+		    <tr>
+			    <td>To:</td>
+			    <td><input type="text" name="to" id="to" value=""  /></td>
+			    <td>&nbsp;&nbsp;<a href="javascript:;" onclick="set_to_current()"><img src="images/193-location-arrow.png"/></a></td>
+		    </tr>
+		</table>
+		
+		<br/>
+		<fieldset data-role="controlgroup"  data-type="horizontal" style="float:right;">
+		     	<input type="radio" name="fare" id="full_fare" checked="checked" />
+		     	<label for="full_fare">Full Fare</label>
+		        
+		     	<input type="radio" name="fare" id="half_fare"  />
+		     	<label for="half_fare">Half Fare</label>
+		</fieldset>
+	
+		
+		<br/>
+		<div style="float:right;">
+		<button data-inline="true" onclick="get_price()" data-role="button" data-icon="search" data-theme="b">Get Price</button>
+	    </div>
+	    
+	    <br/><br/><br/>
+	    <h2 id="price_area"></h2>
+	    
+	</div>
+    
+	
+	<div data-role="footer" data-position="fixed" class="nav-glyphish ui-footer-fixed">
+	    <!-- We want four columns, so set data-grid="c", for three columns:"b", two columns:"a" etc -->
+		<div data-role="navbar" class="nav-glyphish" data-grid="c">
+		<ul>
+			<li><a href="index.html" id="direction" data-icon="custom" data-ajax="false">Direction</a></li>
+			<li><a href="schedule.html" id="schedule" data-icon="custom" data-ajax="false">Schedule</a></li>
+			<li><a href="fare.html" id="fare" data-icon="custom"  data-theme="b" data-ajax="false">Fare</a></li>
+			<li><a href="my_trips.html" id="my_trips" data-icon="custom" data-ajax="false">My Trips</a></li>
+		</ul>
+		</div>
+	</div>	
+
+</div>
+</body>
+</html>

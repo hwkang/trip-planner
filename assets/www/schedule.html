@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="css/main.css" />
+
+<script type="text/javascript" charset="utf-8" src="js/cordova-1.6.0.js"></script>
+<script type="text/javascript"  src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.1.0.min.js"></script>
+</head>
+
+<body>
+<div data-role="page">
+    <div data-role="header" data-position="fixed">
+		<h1>Trip Planner</h1>
+	</div>
+	
+	<div data-role="content">
+	
+		<label for="select-choice-0" class="select">Bus Route</label>
+		<select name="select-choice-0" id="select-choice-1">
+		   <option value="61A">61A</option>
+		   <option value="61B">61B</option>
+		   <option value="61C">61C</option>
+		   <option value="61D">61D</option>
+		   <option value="71A">71A</option>
+		   <option value="71B">71B</option>
+		   <option value="71C">71C</option>
+		   <option value="71D">71D</option>
+		   <option value="28X">28X</option>
+		</select>
+		
+		
+		<br/>
+		<fieldset data-role="controlgroup"  data-type="horizontal">
+		     	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+		     	<label for="radio-choice-1">Inbound</label>
+		        
+		     	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+		     	<label for="radio-choice-2">Outbound</label>
+		</fieldset>
+		<!--<a href="" data-role="button" data-icon="info" data-iconpos="notext">Info</a>-->
+		
+		
+		<br/>		
+		<label for="select-choice-1" class="select">Bus Stop</label>
+		<select name="select-choice-1" id="select-choice-1">
+		   <option value="upitt">University of Pittsburgh</option>
+		   <option value="hamberg">Hamberger Hall</option>
+		   <option value="cmu">Carnegie Mellon</option>
+		   <option value="forbes">Forbes Ave</option>
+		</select>
+		
+		<br/>
+		<label for="select-choice-2" class="select">Date</label>
+		<select name="select-choice-2" id="select-choice-1">
+		   <option value="weekday">Weekday</option>
+		   <option value="weekend">Weekend</option>
+		   <option value="holiday">holiday</option>
+		</select>
+		
+		<br/>
+		<div style="float:right;">
+		<a data-inline="true" href="schedule-result.html" data-role="button" data-icon="search" data-theme="b">Search</a>
+	    </div>
+		
+	</div>
+    
+	
+	
+	<div data-role="footer" data-position="fixed" class="nav-glyphish ui-footer-fixed">
+	    <!-- We want four columns, so set data-grid="c", for three columns:"b", two columns:"a" etc -->
+		<div data-role="navbar" class="nav-glyphish" data-grid="c">
+		<ul>
+			<li><a href="index.html" id="direction" data-icon="custom" data-ajax="false">Direction</a></li>
+			<li><a href="schedule.html" id="schedule" data-icon="custom" data-theme="b" data-ajax="false">Schedule</a></li>
+			<li><a href="fare.html" id="fare" data-icon="custom" data-ajax="false">Fare</a></li>
+			<li><a href="my_trips.html" id="my_trips" data-icon="custom" data-ajax="false">My Trips</a></li>
+		</ul>
+		</div>
+	</div>	
+
+</div>
+</body>
+</html>

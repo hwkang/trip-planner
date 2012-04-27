@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="css/main.css" />
+
+<script type="text/javascript" charset="utf-8" src="js/cordova-1.6.0.js"></script>
+<script type="text/javascript"  src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript">
+    function set_from_current(){
+    	$('#from').val('My Location');
+    }
+    
+    function set_to_current(){
+    	$('#to').val('My Location');
+    }
+    
+    function switch_from_to(){
+    	var tmp = $('#from').val();
+    	$('#from').val($('#to').val());
+    	$('#to').val(tmp);
+    }
+    
+</script>
+
+</head>
+
+<body>
+<div data-role="page">
+    <div data-role="header" data-position="fixed">
+		<h1>Trip Planner</h1>
+	</div>
+	
+	<div data-role="content">
+	<!--Set data-ajax="false" so that second page's javascript can be loaded-->
+	<form method="get" action="direction_route.html" data-ajax="false">
+		<table>
+		    <tr>
+			    <td>From:</td>
+			    <td><input type="text" name="from" id="from" value=""  /></td>
+			    <td>&nbsp;&nbsp;<a href="javascript:;" onclick="set_from_current()"><img src="images/193-location-arrow.png"/></a></td>
+		    </tr>
+		    <tr>
+		        <td></td><td></td>
+		        <td>&nbsp;&nbsp;<a href="javascript:;" onclick="switch_from_to()"><img src="images/288-retweet.png"/></a></td></tr>
+		    <tr>
+			    <td>To:</td>
+			    <td><input type="text" name="to" id="to" value=""  /></td>
+			    <td>&nbsp;&nbsp;<a href="javascript:;" onclick="set_to_current()"><img src="images/193-location-arrow.png"/></a></td>
+		    </tr>
+		</table>
+	
+	    <br/>
+	    <label for="time" class="select">Departure</label>
+		<select name="time" id="departure-time">
+		   <option value="now">Now</option>
+		   <option value="5min">In 5 minutes</option>
+		   <option value="10min">In 10 minutes</option>
+		   <option value="15min">In 15 minutes</option>
+		   <option value="30min">In 30 minutes</option>
+		   <option value="45min">In 45 minutes</option>
+		   <option value="1h">In 1 hour</option>
+		</select>
+		
+		<br/>
+		<div style="float:right;">
+		<button data-inline="true" type="submit" data-role="button" data-icon="search" data-theme="b">Get Directions</button>
+	    </div>
+	    
+	</form>
+	</div>
+    
+	
+	<div data-role="footer" data-position="fixed" class="nav-glyphish ui-footer-fixed">
+	    <!-- We want four columns, so set data-grid="c", for three columns:"b", two columns:"a" etc -->
+		<div data-role="navbar" class="nav-glyphish" data-grid="c">
+		<ul>
+			<li><a href="#" id="direction" data-icon="custom" data-theme="b" data-ajax="false">Direction</a></li>
+			<li><a href="schedule.html" id="schedule" data-icon="custom" data-ajax="false">Schedule</a></li>
+			<li><a href="fare.html" id="fare" data-icon="custom" data-ajax="false">Fare</a></li>
+			<li><a href="my_trips.html" id="my_trips" data-icon="custom" data-ajax="false">My Trips</a></li>
+		</ul>
+		</div>
+	</div>	
+
+</div>
+</body>
+</html>
