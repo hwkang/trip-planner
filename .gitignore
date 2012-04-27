@@ -12,9 +12,6 @@
 
 # Java Files
 *.class
-*.jar
-*.war
-*.ear
 
 
 # Windows image file caches
@@ -30,7 +27,6 @@ Thumbs.db
 *.pydevproject
 .project
 .metadata
-bin/**
 tmp/**
 tmp/**/*
 *.tmp
